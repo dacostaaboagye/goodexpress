@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ABOUT_CONTENT } from "@/presentation/constants/about";
 import { SectionWrapper } from "./section-wrapper";
 import { NAVS } from "@/presentation/constants/navs";
@@ -9,11 +10,12 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             {/* Left Image */}
-            <div>
-              <img
+            <div className="relative h-64 md:h-96"> {/* Added relative and height for Image fill */}
+              <Image
                 src={ABOUT_CONTENT.image.src}
                 alt={ABOUT_CONTENT.image.alt}
-                className="w-full rounded-2xl shadow-lg"
+                className="rounded-2xl shadow-lg object-cover"
+                fill
               />
             </div>
 

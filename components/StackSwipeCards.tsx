@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { cn } from "@/lib/utils"; // Assuming cn is a utility for combining class names
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import React, {
@@ -261,10 +262,11 @@ const StackSwipeCards = forwardRef<StackSwipeCardsRef, StackSwipeCardsProps>(
                   tabIndex={isTopCard ? 0 : -1}
                 >
                   {item.imageUrl && (
-                    <img
+                    <Image
                       src={item.imageUrl}
                       alt={`Card ${i + 1}`}
                       className="absolute inset-0 w-full h-full object-cover"
+                      fill
                     />
                   )}
                   <div className="relative p-6 h-full flex flex-col justify-end">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 // Component with extracted constants
 import { Button } from "@/components/ui/button";
 import { HERO_CONTENT } from "@/presentation/constants/hero";
@@ -53,7 +54,11 @@ export default function Hero() {
                 className="gap-2 rounded-full px-8 border-2 border-white text-white hover:bg-white/10 bg-transparent text-lg font-semibold transition-all duration-300"
                 asChild
               >
-                <Link href={`https://wa.me/${HERO_CONTENT.phoneNumber.replace(/\s/g, "")}`} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={`https://wa.me/${HERO_CONTENT.phoneNumber.replace(/\s/g, "")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <MessageCircle className="w-5 h-5" />
                   {HERO_CONTENT.secondaryButton}
                 </Link>
@@ -71,12 +76,13 @@ export default function Hero() {
           </div>
 
           {/* Right Image */}
-          <div className="md:col-span-2 flex justify-center relative">
-            <div className="absolute -left-1/2 top-1/2 -translate-y-1/2 w-[150%] max-w-[150%] h-auto">
-              <img
+          <div className="md:col-span-2 flex justify-center relative h-full">
+            <div className="absolute -left-1/2 top-1/2 -translate-y-1/2 w-[150%] max-w-[150%] h-full">
+              <Image
                 src={HERO_CONTENT.imageSrc}
                 alt={HERO_CONTENT.imageAlt}
                 className="w-full h-full object-contain"
+                fill
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl">
                 <p className="text-4xl font-black">

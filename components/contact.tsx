@@ -176,7 +176,7 @@ export default function Contact() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full !mt-8"
+                  className="w-full mt-8!"
                   disabled={isSubmitting}
                 >
                   {isSubmitting
