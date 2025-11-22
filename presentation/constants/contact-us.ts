@@ -1,4 +1,4 @@
-import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 export const contactContent = {
     header: {
@@ -53,8 +53,8 @@ export const contactContent = {
                 placeholder: "+233 55 235 1213",
             },
             address: {
-                label: "Delivery Address",
-                placeholder: "Where should we deliver?",
+                label: "Delivery Address/Notes",
+                placeholder: "Where should we deliver?/Notes we should consider",
             },
         },
         submitButton: "Book Now",

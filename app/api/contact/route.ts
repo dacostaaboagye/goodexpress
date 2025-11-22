@@ -19,11 +19,11 @@ export async function POST(req: NextRequest) {
 
   const mailOptions = {
     from: process.env.EMAIL_FROM, // sender address
-    to: "richardatobrah23@gmail.com", // list of receivers
+    to: process.env.EMAIL_TO, // list of receivers
     subject: "New Quick Booking Request",
     text: `You have a new booking request:\n\nName: ${name}\nPhone: ${phone}\nAddress: ${address}`,
     html:
-      "\n      <h2>New Quick Booking Request</h2>\n      <p><strong>Name:</strong> " + name + "</p>\n      <p><strong>Phone:</strong> " + phone + "</p>\n      <p><strong>Address:</strong> " + address + "</p>\n    ",
+      "\n      <h2>New Quick Booking Request</h2>\n      <p><strong>Name:</strong> " + name + "</p>\n      <p><strong>Phone:</strong> " + phone + "</p>\n      <p><strong>Address/Notes:</strong> " + address + "</p>\n    ",
   };
 
   try {
